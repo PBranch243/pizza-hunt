@@ -1,4 +1,4 @@
-const { Pizza } = require('../models/pizza.js');
+const { Pizza } = require('../models/Pizza');
 
 const pizzaController = {
     // the functions will go in here as methods
