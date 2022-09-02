@@ -2,10 +2,15 @@ const { Schema, model } = require('mongoose');
 
 const CommentSchema = new Schema({
     writtenBy: {
-        type: String
+        type: String,
+        required: true,
+        trim: true
+
     },
     commentBody: {
-        type: String
+        type: String,
+        required: true,
+        trim: true
     },
     createdAt: {
         type: Date,
