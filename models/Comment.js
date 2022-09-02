@@ -9,23 +9,25 @@ const ReplySchema = new Schema(
             default: () => new Types.ObjectId()
         },
         replyBody: {
-            type: String
-        },
-        writtenBy: {
-            type: String
-        },
-        createdAt: {
+            type: String,
+            required: true
+          },
+          writtenBy: {
+            type: String,
+            required: true,
+          },
+          createdAt: {
             type: Date,
             default: Date.now,
             get: createdAtVal => dateFormat(createdAtVal)
-        }
-    },
-    {
-        toJSON: {
+          }
+        },
+        {
+          toJSON: {
             getters: true
+          }
         }
-    }
-);
+      );
 
 const CommentSchema = new Schema({
     writtenBy: {
